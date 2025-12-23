@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-//statelesswidgettan extends alan Mycontainer adında oluşturduğumuz sınıf
+//statelesswidgettan extends alan Mylistview adında oluşturduğumuz sınıf
 class Mylistview extends StatelessWidget {
+  //nesneye dayalı(oop) nedir araştırabilirsiniz
+  //flutter nesneye dayalı mıdır ? araştırın
   //kurucu fonksiyon sınıfımız çağırıldığında ilk çalışan kısım
   const Mylistview({Key? key}) : super(key: key);
 
