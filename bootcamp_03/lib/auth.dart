@@ -42,6 +42,7 @@ class Auth extends StatelessWidget {
             ),
 
             const SizedBox(height: 20),
+            
             //şifre
             SizedBox(
               width: 300,
@@ -76,11 +77,11 @@ class Auth extends StatelessWidget {
                   debugPrint(passwordController.text);
                   if(emailController.text == "bmbilecik@gmail.com" && passwordController.text=="123456")
                   {
-                    Navigator.push(context, MaterialPageRoute(builder:(context)=> Homepage() ));
+                    debugPrint("Başarılı");
                   }
                   else
                   {
-                    debugPrint("Kullanıcı adı ya da şire hatalı lütfen tekrar deneyiniz");
+                    debugPrint("Hatalı");
                   }
                 },
                 child: const Text(
