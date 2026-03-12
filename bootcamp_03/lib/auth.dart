@@ -1,15 +1,26 @@
 import 'package:bootcamp_03/homepage.dart';
 import 'package:flutter/material.dart';
 
-class Auth extends StatelessWidget {
+class Auth extends StatefulWidget {
   const Auth({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  State<Auth> createState() => _AuthState();
+}
+
+class _AuthState extends State<Auth> {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
 
-    return Scaffold( 
+    @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+  @override
+  Widget build(BuildContext context) {
+      return Scaffold( 
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
@@ -78,6 +89,7 @@ class Auth extends StatelessWidget {
                   if(emailController.text == "bmbilecik@gmail.com" && passwordController.text=="123456")
                   {
                     debugPrint("Başarılı");
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage()));
                   }
                   else
                   {
